@@ -20,6 +20,7 @@ Installation
 git clone git@github.com:matsubo/fast_pay.git
 cd fast_pay
 bower install
+echo 'YOUR SECRET KEY' > secret.key
 ```
 
 
