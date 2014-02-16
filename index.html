@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fast Pay example</title>
+        <meta name="author" content="Yuki Matsukura">
+
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-193685-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
+
+         </script>
+
+
+
+        <!-- Bootstrap -->
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body style="  padding-top: 50px; ">
+
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://matsu.teraren.com/static/fast_pay/">Fast Pay test</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://matsu.teraren.com/static/fast_pay/">Home</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="starter-template">
+                <h1>Yahoo! FastPay example</h1>
+
+                <h2>使い方</h2>
+        <ul>
+             <li>Yahoo決済ボタンを押す</li>
+             <li>"4242424242424242"を入れる。その他は適当に。</li>
+             <li>このページに自動的に戻ってくる。ボタンがグレーになっている。そして、Submitボタンを押す。</li>
+             <li>Yahooからのレスポンスが表示される。</li>
+         </ul>
+
+
+         <h2>サンプル決済</h2>
+         <div class="text-center">
+             <form action="post.php" method="POST">
+                 <script
+                     src="https://s.yimg.jp/images/wallet/fastpay/js/fastpay-v1.js" class="fastpay-button"
+                     data-key="hN9jCnEk6YjdMGMz6RRBdPKB"
+                     data-amount="100">
+                     </script>
+                     <input type="submit" value="決済する" class="btn btn-success btn-lg">
+                 </form>
+             </div>
+         </div>
+
+     </div><!-- /.container -->
+
+
+
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>
+
+
+
