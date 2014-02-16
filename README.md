@@ -1,6 +1,13 @@
 Yahoo! FastPay sample code
 ==============================
 
+
+Live example
+------------------
+
+- See
+  - http://matsu.teraren.com/static/fast_pay/
+
 Requirements
 ------------------
 - bower
