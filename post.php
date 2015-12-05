@@ -15,7 +15,9 @@
 <pre>
 
 <?php
-require_once(__DIR__ . "/src/FastPay.php");
+require 'vendor/autoload.php';
+
+use FastPay\FastPay;
 
 try {
     if (!isset($_POST["fastpayToken"])) {
@@ -23,15 +25,32 @@ try {
         exit;
     }
 
+
     $token = $_POST["fastpayToken"];
-    FastPay::setSecret(trim(file_get_contents('./secret.key')));
-    $response = FastPay_Charge::create(array(
-        "amount" => 1000000,
-        "card" => $token,
-        "description" => "bob@customer.com",
+
+
+    $fastpay = new FastPay(trim(file_get_contents('./secret.key')));
+
+
+    // 課金を作成
+    $charge = $fastpay->charge->create(array(
+      "amount" => 666,
+      "card" => $token,
+      "description" => "fastpay@example.com",
+      "capture" => "false",
     ));
-    // 決済成功
-    var_dump($response);
+    var_dump($charge);
+
+
+    // 課金を確定
+    $charge = $charge->capture();
+    var_dump($charge);
+
+    // 課金を取り消し
+    $response3 = $charge->refund();
+    var_dump($response3);
+
+
 } catch (Exception $e) {
     // エラー
     var_dump($e);

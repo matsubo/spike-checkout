@@ -2,7 +2,7 @@ Yahoo! FastPay sample code
 ==============================
 
 
-Live example
+Live demo
 ------------------
 
 - See
@@ -12,15 +12,18 @@ Requirements
 ------------------
 - bower
 - PHP 5.3=<
+- composer
 
 
-Installation
+Setup
 -------------------
+
 ```
-git clone git@github.com:matsubo/fast_pay.git
-cd fast_pay
-bower install
-echo 'YOUR SECRET KEY' > secret.key
+% git clone git@github.com:matsubo/fast_pay.git
+% cd fast_pay
+% bower install
+% php composer.phar install
+% echo 'YOUR SECRET KEY' > secret.key
 ```
 
 

@@ -1,0 +1,6 @@
+{
+  "require": {
+    "fastpay/fastpay-php":"~1.2.0"
+  }
+}
+
