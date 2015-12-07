@@ -19,8 +19,8 @@ Setup
 -------------------
 
 ```
-% git clone git@github.com:matsubo/spike_checkout.git
-% cd spike_checkout
+% git clone git@github.com:matsubo/spike-checkout.git
+% cd spike-checkout
 % bower install
 % php composer.phar install
 % echo 'YOUR SECRET KEY' > secret.key
