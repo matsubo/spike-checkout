@@ -17,38 +17,50 @@
 <?php
 require 'vendor/autoload.php';
 
-use FastPay\FastPay;
-
 try {
-    if (!isset($_POST["fastpayToken"])) {
+    if (!isset($_POST["card_token"])) {
         print 'invalid request';
         exit;
     }
 
+    $card_token = $_POST["card_token"];
 
-    $token = $_POST["fastpayToken"];
+    $spike = new \Issei\Spike\Spike(trim(file_get_contents('./secret.key')));
 
-
-    $fastpay = new FastPay(trim(file_get_contents('./secret.key')));
-
+    $token = new \Issei\Spike\Model\Token($card_token);
 
     // 課金を作成
-    $charge = $fastpay->charge->create(array(
-      "amount" => 666,
-      "card" => $token,
-      "description" => "fastpay@example.com",
-      "capture" => "false",
-    ));
+    $request = new \Issei\Spike\ChargeRequest();
+    $request
+      ->setToken($token)
+      ->setAmount(666, 'JPY')
+      ->setCapture(false) // If you set false, you can delay capturing.
+      ;
+
+    $product = new \Issei\Spike\Model\Product('my-product-00001');
+    $product
+      ->setTitle('Product Name')
+      ->setDescription('Description of Product.')
+      ->setPrice(333, 'JPY')
+      ->setLanguage('JA')
+      ->setCount(2)
+      ->setStock(97)
+      ;
+
+    $request->addProduct($product);
+
+    $charge = $spike->charge($request);
+
     var_dump($charge);
 
 
     // 課金を確定
-    $charge = $charge->capture();
+    $charge = $spike->capture($charge);
     var_dump($charge);
 
     // 課金を取り消し
-    $response3 = $charge->refund();
-    var_dump($response3);
+    $response = $spike->refund($charge);
+    var_dump($response);
 
 
 } catch (Exception $e) {

@@ -1,6 +1,6 @@
 {
   "require": {
-    "fastpay/fastpay-php":"~1.2.0"
+    "issei-m/spike-php":"dev-master"
   }
 }
 

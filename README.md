@@ -6,7 +6,7 @@ Live demo
 ------------------
 
 - See
-  - http://matsu.teraren.com/static/fast_pay/
+  - http://matsu.teraren.com/static/spike_checkout/
 
 Requirements
 ------------------
@@ -19,8 +19,8 @@ Setup
 -------------------
 
 ```
-% git clone git@github.com:matsubo/fast_pay.git
-% cd fast_pay
+% git clone git@github.com:matsubo/spike_checkout.git
+% cd spike_checkout
 % bower install
 % php composer.phar install
 % echo 'YOUR SECRET KEY' > secret.key
