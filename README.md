@@ -1,4 +1,4 @@
-Yahoo! FastPay sample code
+SPIKE Checkout sample code
 ==============================
 
 
