@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/issei-m/spike-php.git",
-                "reference": "d92d81d08c6540b6e25a789af4e992439610a552"
+                "reference": "61ac8185a0207a1548b3575ad1260f651506a0b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/issei-m/spike-php/zipball/d92d81d08c6540b6e25a789af4e992439610a552",
-                "reference": "d92d81d08c6540b6e25a789af4e992439610a552",
+                "url": "https://api.github.com/repos/issei-m/spike-php/zipball/61ac8185a0207a1548b3575ad1260f651506a0b1",
+                "reference": "61ac8185a0207a1548b3575ad1260f651506a0b1",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "spike",
                 "spike.cc"
             ],
-            "time": "2015-05-22 08:20:32"
+            "time": "2015-12-07 14:04:22"
         }
     ],
     "packages-dev": [],
